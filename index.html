@@ -4,8 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money Master</title>
+    <!-- Tailwind and DaisyUI CDN links -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+
+    <!-- Money Master App -->
+<!-- Main Section -->
+<main>
+    <h1 class="text-5xl font-bold text-center my-4">Money Master</h1>
+    <section class="p-5" >
+
+        <div class="flex justify-around lg:flex-row flex-col gap-4">
+            <!-- images -->
+           <div><img class="lg:w-[600px] h-[700px]" src="Money.avif" alt=""></div>
+
+           <!-- Calculations -->
+           <div class="lg:w-[600px] h-[700px] bg-[#f3f3f3]">
+
+            <div class="text-[center]">
+                <!-- Income -->
+                <div class="my-10">
+                     <h1 class="text-2xl font-medium text-center ">Income</h1>
+                <div class="flex justify-around mt-2">
+                    <label class="" for="">Income:</label>
+                <input id="income-value" class="pl-2" placeholder="1000" type="text">
+                </div>
+                </div>
+               
+                <!-- Expenses -->
+                <div class="mt-2 space-y-3">
+                    <h1 class="text-2xl font-medium text-center ">Expenses</h1>
+
+                <div class="flex justify-around">
+                    <label  class="" for="">Food:</label>
+                    <input id="food-cost" class="pl-2" placeholder="1000" type="text">
+                </div>
+                
+                <div class="flex justify-around">
+                    <label class="" for="">Rent:</label>
+                    <input id="rent-cost"  class="pl-2 " placeholder="1000" type="text">
+                </div>
+
+                <div class="flex justify-around">
+                    <label class="" for="">Clothes:</label>
+                    <input id="clothes-cost" class="pl-2" placeholder="1000" type="text">
+                </div>
+                </div>
+                
+                <!-- Calculation button -->
+                <div class="flex justify-center my-4">
+                    <button onclick="clickMasterButton()" class="btn btn-error">Calculation</button>
+                </div>
+
+              <!-- Total amount -->
+                <div class="space-y-2">
+                    <h1 class="text-2xl font-medium text-center ">Total Expenses: $<span id="total-expense">0</span></h1>
+                    <h1 class="text-2xl font-medium text-center ">Balance: $<span id="total-balance">0</span></h1>
+                </div>
+
+                <!-- Discount -->
+                <div class="flex  items-center w-[280px] gap-3 mx-auto my-10">
+                    <label class="" for="">Clothes:</label>
+                  
+                    <input class="pl-2 w-[90px]" placeholder="5%" type="text">
+                      <span>%</span>
+                    <button id="clickDiscountbtn" class="btn btn-error w-[100px] btn-sm">Save</button>
+                </div>
+
+              <!-- Saving ammount -->
+                <div class="space-y-2">
+                    <h1 class="text-2xl font-medium text-center ">Saving Amount: $<span id="youSave">0</span></h1>
+                    <h1 class="text-2xl font-medium text-center ">Remaining Balance: $<span>0</span></h1>
+                </div>
+                
+            </div>
+
+           </div>
+        </div>
+
+    </section>
     
+</main>
+    <!-- script -->
+     <script src="master.js"></script>
 </body>
 </html>
